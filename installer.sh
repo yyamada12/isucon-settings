@@ -4,7 +4,7 @@
 sudo apt update -y
 sudo apt install -y vim tmux htop dstat glances unzip
 
-# alp インストール
+# alp
 mkdir -p ~/tmp
 cd ~/tmp
 wget https://github.com/tkuchiki/alp/releases/download/v0.3.1/alp_linux_amd64.zip
@@ -13,7 +13,7 @@ sudo install ./alp /usr/local/bin
 
 curl -L https://raw.githubusercontent.com/yyamada12/isucon-settings/master/alp.yml -o ~/alp.yml
 
-# percona-toolkit のインストール
+# percona-toolkit
 mkdir -p ~/tmp
 cd ~/tmp
 wget percona.com/get/pt-query-digest
@@ -44,3 +44,9 @@ alias pts='sudo pt-query-digest --limit 10 /var/log/mysql/slow.log | slackcat -t
 # dotfiles
 curl -L https://raw.githubusercontent.com/yyamada12/isucon-settings/master/.tmux.conf -o ~/.tmux.conf
 curl -L https://raw.githubusercontent.com/yyamada12/isucon-settings/master/.gitconfig -o ~/.gitignore
+
+# slackcat
+wget https://github.com/bcicen/slackcat/releases/download/v1.5/slackcat-1.5-linux-amd64 -O slackcat
+sudo mv slackcat /usr/local/bin/
+sudo chmod +x /usr/local/bin/slackcat
+slackcat --configure

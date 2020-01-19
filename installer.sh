@@ -34,10 +34,10 @@ alias gf='git fetch'
 alias gci='git commit'
 
 alias al='alp ltsv -c ~/alp.yml | less'
-alias als='alp ltsv -c ~/alp.yml | slackcat -t -c 12yacropolisy'
+alias als='alp ltsv -c ~/alp.yml | slackcat -t -c 12yacropolisy -n alp'
 
 alias pt='sudo pt-query-digest --limit 10 /var/log/mysql/slow.log | less'
-alias pts='sudo pt-query-digest --limit 10 /var/log/mysql/slow.log | slackcat -t -c 12yacropolisy'
+alias pts='sudo pt-query-digest --limit 10 /var/log/mysql/slow.log | slackcat -c 12yacropolisy -n slowlog'
 
 """ >> ~/.bashrc
 

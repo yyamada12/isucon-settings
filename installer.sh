@@ -7,7 +7,7 @@ sudo apt install -y vim tmux htop dstat glances unzip
 # alp
 mkdir -p ~/tmp
 cd ~/tmp
-wget https://github.com/tkuchiki/alp/releases/download/v0.3.1/alp_linux_amd64.zip
+wget https://github.com/tkuchiki/alp/releases/download/v1.0.3/alp_linux_amd64.zip
 unzip alp_linux_amd64.zip
 sudo install ./alp /usr/local/bin
 

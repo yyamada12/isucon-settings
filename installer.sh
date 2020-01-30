@@ -23,6 +23,9 @@ cd ~/tmp
 wget percona.com/get/pt-query-digest
 sudo install ./pt-query-digest /usr/local/bin
 
+# remove tmp
+rm -rf ~/tmp
+
 # alias
 echo """
 # git

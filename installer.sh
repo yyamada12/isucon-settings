@@ -2,7 +2,8 @@
 
 # 各種インストール
 sudo apt update -y
-sudo apt install -y vim tmux htop dstat glances unzip
+sudo apt install -y vim tmux htop dstat glances unzip graphviz
+
 # netdata
 sudo apt install -y autoconf-archive zlib1g-dev uuid-dev libmnl-dev libuv1-dev liblz4-dev libssl-dev libjudy-dev
 bash <(curl -Ss https://my-netdata.io/kickstart.sh)

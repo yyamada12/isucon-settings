@@ -41,10 +41,13 @@ alias gf='git fetch'
 alias gci='git commit'
 
 alias al='alp ltsv -c ~/alp.yml | less'
-alias als='alp ltsv -c ~/alp.yml | slackcat -t -c 12yacropolisy -n alp'
+alias als='alp ltsv -c ~/alp.yml | slackcat -t -c 12yacropolisy -n alp.txt'
 
 alias pt='sudo pt-query-digest --limit 10 --report-format profile,query_report /var/log/mysql/slow.log | less'
-alias pts='sudo pt-query-digest --limit 10 --report-format profile,query_report /var/log/mysql/slow.log | slackcat -c 12yacropolisy -n slowlog'
+alias pts='sudo pt-query-digest --limit 10 --report-format profile,query_report /var/log/mysql/slow.log | slackcat -c 12yacropolisy -n slowlog.txt'
+
+alias pp='go tool pprof -png -output ~/pprof/pprof.png http://localhost:6060/debug/pprof/profile'
+alias pps='go tool pprof -png -output ~/pprof/pprof.png http://localhost:6060/debug/pprof/profile && slackcat -c 12yacropolisy -n pprof.png ~/pprof/pprof.png'
 
 stty stop undef
 """ >> ~/.bashrc

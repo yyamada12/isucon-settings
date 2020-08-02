@@ -1,4 +1,6 @@
-#!/bin/sh -eux
+#!/bin/sh
+
+set -eux
 
 # 各種インストール
 sudo apt update -y
@@ -6,7 +8,7 @@ sudo apt install -y vim tmux htop dstat glances unzip graphviz
 
 # netdata
 sudo apt install -y autoconf-archive zlib1g-dev uuid-dev libmnl-dev libuv1-dev liblz4-dev libssl-dev libjudy-dev
-bash <(curl -Ss https://my-netdata.io/kickstart.sh)
+bash <(curl -Ss https://my-netdata.io/kickstart.sh) --dont-wait
 
 # alp
 mkdir -p ~/tmp
@@ -42,16 +44,18 @@ alias gf='git fetch'
 alias gci='git commit'
 
 alias al='alp ltsv -c ~/alp.yml | less'
-alias als='alp ltsv -c ~/alp.yml | slackcat -t -c 12yacropolisy -n alp.txt'
+alias als='alp ltsv -c ~/alp.yml | slackcat -t -c yyamada -n alp.txt'
 
 alias pt='sudo pt-query-digest --limit 10 --report-format profile,query_report /var/log/mysql/slow.log | less'
-alias pts='sudo pt-query-digest --limit 10 --report-format profile,query_report /var/log/mysql/slow.log | slackcat -c 12yacropolisy -n slowlog.txt'
+alias pts='sudo pt-query-digest --limit 10 --report-format profile,query_report /var/log/mysql/slow.log | slackcat -c yyamada -n slowlog.txt'
 
 alias pp='go tool pprof -png -output ~/pprof/pprof.png http://localhost:6060/debug/pprof/profile'
-alias pps='go tool pprof -png -output ~/pprof/pprof.png http://localhost:6060/debug/pprof/profile && slackcat -c 12yacropolisy -n pprof.png ~/pprof/pprof.png'
+alias pps='go tool pprof -png -output ~/pprof/pprof.png http://localhost:6060/debug/pprof/profile && slackcat -c yyamada -n pprof.png ~/pprof/pprof.png'
 
 stty stop undef
 """ >> ~/.bashrc
+
+source ~/.bashrc
 
 # dotfiles
 curl -L https://raw.githubusercontent.com/yyamada12/isucon-settings/master/.tmux.conf -o ~/.tmux.conf

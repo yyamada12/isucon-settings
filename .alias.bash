@@ -23,3 +23,7 @@ alias pts='sudo pt-query-digest --limit 10 --report-format profile,query_report 
 # pprof
 alias pp='go tool pprof -png -output ~/pprof/pprof.png http://localhost:6060/debug/pprof/profile'
 alias pps='go tool pprof -png -output ~/pprof/pprof.png http://localhost:6060/debug/pprof/profile && slackcat -c yyamada -n pprof.png ~/pprof/pprof.png'
+
+# app
+alias deploy='~/deploy.sh'
+alias applog='sudo journalctl -f -u'

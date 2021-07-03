@@ -37,7 +37,7 @@ alias gco='git checkout'
 alias gf='git fetch'
 alias gci='git commit'
 alias gl='git log'
-alias ggr="git log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+alias ggr=\"git log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative\"
 
 # alp
 alias al='alp ltsv -c ~/alp.yml | less'

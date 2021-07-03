@@ -47,15 +47,15 @@ alias ggr="git log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%C
 
 # alp
 alias al='alp ltsv -c ~/alp.yml | less'
-alias als='alp ltsv -c ~/alp.yml | slackcat -t -c cancer_acropolis -n alp.txt'
+alias als='alp ltsv -c ~/alp.yml | slackcat -t -c yyamada -n alp.txt'
 
 # pt-query-digest
 alias pt='sudo pt-query-digest --limit 10 --report-format profile,query_report /var/log/mysql/slow.log | less'
-alias pts='sudo pt-query-digest --limit 10 --report-format profile,query_report /var/log/mysql/slow.log | slackcat -c cancer_acropolis -n slowlog.txt'
+alias pts='sudo pt-query-digest --limit 10 --report-format profile,query_report /var/log/mysql/slow.log | slackcat -c yyamada -n slowlog.txt'
 
 # pprof
 alias pp='go tool pprof -png -output ~/pprof/pprof.png http://localhost:6060/debug/pprof/profile'
-alias pps='go tool pprof -png -output ~/pprof/pprof.png http://localhost:6060/debug/pprof/profile && slackcat -c cancer_acropolis -n pprof.png ~/pprof/pprof.png'
+alias pps='go tool pprof -png -output ~/pprof/pprof.png http://localhost:6060/debug/pprof/profile && slackcat -c yyamada -n pprof.png ~/pprof/pprof.png'
 
 # for incremental search with Ctr + S
 stty stop undef
@@ -66,7 +66,7 @@ curl -L https://raw.githubusercontent.com/yyamada12/isucon-settings/master/.tmux
 curl -L https://raw.githubusercontent.com/yyamada12/isucon-settings/master/.gitconfig -o ~/.gitconfig
 
 # slackcat
-wget https://github.com/bcicen/slackcat/releases/download/v1.5/slackcat-1.5-linux-amd64 -O slackcat
+curl -Lo slackcat https://github.com/bcicen/slackcat/releases/download/1.7.2/slackcat-1.7.2-$(uname -s)-amd64
 sudo mv slackcat /usr/local/bin/
 sudo chmod +x /usr/local/bin/slackcat
 slackcat --configure

@@ -10,24 +10,18 @@ sudo apt install -y --fix-missing vim tmux htop dstat glances unzip graphviz
 sudo apt install -y autoconf-archive zlib1g-dev uuid-dev libmnl-dev libuv1-dev liblz4-dev libssl-dev libjudy-dev
 bash <(curl -Ss https://my-netdata.io/kickstart.sh) --dont-wait
 
-
-mkdir -p ~/tmp
-cd ~/tmp
-
 # alp
 wget https://github.com/tkuchiki/alp/releases/download/v1.0.3/alp_linux_amd64.zip
 unzip alp_linux_amd64.zip
 sudo install ./alp /usr/local/bin
+rm alp_linux_amd64.zip alp
 
 curl -L https://raw.githubusercontent.com/yyamada12/isucon-settings/master/alp.yml -o ~/alp.yml
 
 # percona-toolkit
 wget percona.com/get/pt-query-digest
 sudo install ./pt-query-digest /usr/local/bin
-
-# remove tmp
-cd ~
-rm -rf ~/tmp
+rm pt-query-digest
 
 # bashrc
 echo """

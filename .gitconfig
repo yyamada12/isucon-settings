@@ -6,6 +6,17 @@
   st = status
   bra = branch
   gr = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  br = branch
+  cia = commit --amend
+  cim = commit -m
+  ciam = commit --amend -m
+  gn = grep -n
+  dfca = diff --cached
+  dfch = diff --check
+  dfw = diff --word-diff
+  dfwca = diff --word-diff --cached
+  shw = show --word-diff
+  pushu = push -u
 [user]
   name = yyamada12
   email = 12yacropolisy@gmail.com

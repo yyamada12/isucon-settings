@@ -11,6 +11,13 @@ alias gf='git fetch'
 alias gci='git commit'
 alias gl='git log'
 alias ggr="git log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+alias gsr='gst && echo && ggr'
+
+# shell
+alias lh='ls -lah'
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
 
 # alp
 alias al='alp ltsv -c ~/alp.yml | less'
@@ -27,3 +34,12 @@ alias pps='go tool pprof -png -output ~/pprof/pprof.png http://localhost:6060/de
 # app
 alias deploy='~/deploy.sh'
 alias applog='sudo journalctl -f -u'
+
+# dstat
+alias dstata='dstat -tlcmgdr --socket --tcp -n'
+
+# tail
+alias tlf='tail -F'
+
+# watch
+alias watch='watch '

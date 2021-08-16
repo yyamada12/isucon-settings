@@ -19,3 +19,4 @@ stty stop undef
 # dotfiles
 curl -L https://raw.githubusercontent.com/yyamada12/isucon-settings/master/.tmux.conf -o ~/.tmux.conf
 curl -L https://raw.githubusercontent.com/yyamada12/isucon-settings/master/.gitconfig -o ~/.gitconfig
+curl -L https://raw.githubusercontent.com/yyamada12/isucon-settings/master/.vimrc -o ~/.vimrc

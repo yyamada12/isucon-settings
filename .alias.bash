@@ -19,6 +19,15 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 
+# dstat
+alias dstata='dstat -tlcmgdr --socket --tcp -n'
+
+# tail
+alias tlf='tail -F'
+
+# watch
+alias watch='watch '
+
 # alp
 alias al='alp ltsv -c ~/alp.yml | less'
 alias als='alp ltsv -c ~/alp.yml | slackcat -t -c yyamada -n alp.txt'
@@ -30,16 +39,8 @@ alias pts='sudo pt-query-digest --limit 10 --report-format profile,query_report 
 # pprof
 alias pp='go tool pprof -png -output ~/pprof/pprof.png http://localhost:6060/debug/pprof/profile'
 alias pps='go tool pprof -png -output ~/pprof/pprof.png http://localhost:6060/debug/pprof/profile && slackcat -c yyamada -n pprof.png ~/pprof/pprof.png'
+alias ppb='go tool pprof -http=":1234" http://localhost:6060/debug/pprof/profile'
 
 # app
 alias deploy='~/deploy.sh'
 alias applog='sudo journalctl -f -u'
-
-# dstat
-alias dstata='dstat -tlcmgdr --socket --tcp -n'
-
-# tail
-alias tlf='tail -F'
-
-# watch
-alias watch='watch '

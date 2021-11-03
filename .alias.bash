@@ -29,7 +29,7 @@ alias tlf='tail -F'
 alias watch='watch '
 
 # alp
-alias al='alp ltsv -c ~/alp.yml | less'
+alias al='alp ltsv -c ~/alp.yml'
 alias als='alp ltsv -c ~/alp.yml | slackcat -t -c yyamada -n alp.txt'
 
 # pt-query-digest

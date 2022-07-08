@@ -31,15 +31,15 @@ alias watch='watch '
 
 # alp
 alias al='alp ltsv -c ~/alp.yml'
-alias als='alp ltsv -c ~/alp.yml | slackcat -t -c yyamada -n alp.txt'
+alias als='alp ltsv -c ~/alp.yml | slackcat -t -c cancer_acropolis -n alp.txt'
 
 # pt-query-digest
 alias pt='sudo pt-query-digest --limit 10 --report-format profile,query_report /var/log/mysql/slow.log | less'
-alias pts='sudo pt-query-digest --limit 10 --report-format profile,query_report /var/log/mysql/slow.log | slackcat -c yyamada -n slowlog.txt'
+alias pts='sudo pt-query-digest --limit 10 --report-format profile,query_report /var/log/mysql/slow.log | slackcat -c cancer_acropolis -n slowlog.txt'
 
 # pprof
 alias pp='go tool pprof -png -output ~/pprof/pprof.png http://localhost:6060/debug/pprof/profile'
-alias pps='go tool pprof -png -output ~/pprof/pprof.png http://localhost:6060/debug/pprof/profile && slackcat -c yyamada -n pprof.png ~/pprof/pprof.png'
+alias pps='go tool pprof -png -output ~/pprof/pprof.png http://localhost:6060/debug/pprof/profile && slackcat -c cancer_acropolis -n pprof.png ~/pprof/pprof.png'
 alias ppb='go tool pprof -http=":1234" http://localhost:6060/debug/pprof/profile'
 
 # app

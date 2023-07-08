@@ -23,8 +23,11 @@ wget percona.com/get/pt-query-digest
 sudo install ./pt-query-digest /usr/local/bin
 rm pt-query-digest
 
-# slackcat
-curl -Lo slackcat https://github.com/bcicen/slackcat/releases/download/1.7.2/slackcat-1.7.2-$(uname -s)-amd64
-sudo mv slackcat /usr/local/bin/
-sudo chmod +x /usr/local/bin/slackcat
-slackcat --configure
+# # slackcat
+# curl -Lo slackcat https://github.com/bcicen/slackcat/releases/download/1.7.2/slackcat-1.7.2-$(uname -s)-amd64
+# sudo mv slackcat /usr/local/bin/
+# sudo chmod +x /usr/local/bin/slackcat
+# slackcat --configure
+
+# upload_file_slack.sh
+curl -L https://raw.githubusercontent.com/yyamada12/isucon-settings/master/upload_file_slack.sh -o ~/upload_file_slack.sh

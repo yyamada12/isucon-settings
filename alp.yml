@@ -11,7 +11,7 @@ matching_groups: # array
 # - '/icons/.+'
 # - '/history/.+'
 filters:         # string
-output:		count,2xx,3xx,4xx,5xx,method,uri,min,p50,p99,max,sum          # string(comma separated)
+output:		count,2xx,3xx,4xx,5xx,method,uri,min,p99,max,sum          # string(comma separated)
 pos_file:        # string
 nosave_pos:      # boolean
 ltsv:

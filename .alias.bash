@@ -13,6 +13,7 @@ alias gci='git commit'
 alias gl='git log'
 alias ggr="git log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 alias gsr='gst && echo && ggr'
+alias gres='git reset'
 
 # shell
 alias lh='ls -lah'

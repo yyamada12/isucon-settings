@@ -4,7 +4,7 @@ set -eux
 
 # 各種インストール
 sudo apt update -y
-sudo apt install -y --fix-missing git vim tmux
+sudo apt install -y --fix-missing git vim tmux tig
 
 # bashrc
 curl -L https://raw.githubusercontent.com/yyamada12/isucon-settings/master/.alias.bash -o ~/.alias.bash

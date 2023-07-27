@@ -11,3 +11,9 @@ for monitoring tools
 ```bash
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/yyamada12/isucon-settings/master/install_tools.sh)"
 ```
+
+for monitoring tools (arm)
+
+```bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/yyamada12/isucon-settings/master/install_tools_arm.sh)"
+```

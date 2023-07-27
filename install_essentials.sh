@@ -20,3 +20,6 @@ stty stop undef
 curl -L https://raw.githubusercontent.com/yyamada12/isucon-settings/master/.tmux.conf -o ~/.tmux.conf
 curl -L https://raw.githubusercontent.com/yyamada12/isucon-settings/master/.gitconfig -o ~/.gitconfig
 curl -L https://raw.githubusercontent.com/yyamada12/isucon-settings/master/.vimrc -o ~/.vimrc
+
+# deploy script
+curl -L https://raw.githubusercontent.com/yyamada12/isucon-settings/master/deploy.sh -o ~/deploy.sh

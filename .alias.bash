@@ -31,9 +31,9 @@ alias tlf='tail -F'
 alias watch='watch '
 
 # alp
-alias al='alp ltsv -c ~/alp.yml'
+alias al='sudo alp ltsv -c ~/alp.yml'
 # alias als='alp ltsv -c ~/alp.yml | slackcat -t -c cancer_acropolis -n alp.txt'
-alias als='alp ltsv -c ~/alp.yml > alp-result.txt && ~/upload_file_slack.sh alp-result.txt isucon && rm -f alp-result.txt'
+alias als='sudo alp ltsv -c ~/alp.yml > alp-result.txt && ~/upload_file_slack.sh alp-result.txt isucon && rm -f alp-result.txt'
 
 # pt-query-digest
 alias pt='sudo pt-query-digest --limit 10 --report-format profile,query_report /var/log/mysql/slow.log | less'

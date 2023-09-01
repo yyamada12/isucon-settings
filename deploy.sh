@@ -14,12 +14,11 @@ function rotate_log () {
 rotate_log /var/log/nginx/access.log
 rotate_log /var/log/nginx/error.log
 rotate_log /var/log/mysql/slow.log
-rotate_log ~/pprof/pprof.png
 
 
 # build go app
-cd Makefileのパス
-make
+cd $APP_DIR
+$APP_BUILD_CMD
 
 # update mysqld.cnf
 if [ -e ~/etc/mysqld.cnf ]; then
@@ -28,7 +27,7 @@ fi
 
 # restart services
 sudo systemctl restart mysql
-sudo systemctl restart アプリのサービス
+sudo systemctl restart $APP_SERVICE_NAME
 sudo systemctl restart nginx
 
 date -R

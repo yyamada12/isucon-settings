@@ -48,4 +48,17 @@ alias ppb='go tool pprof -http=":1234" http://localhost:6060/debug/pprof/profile
 
 # app
 alias deploy='~/deploy.sh'
-alias applog='sudo journalctl -u'
+alias applog='sudo journalctl -u $APP_SERVICE_NAME'
+
+# systemctl
+alias sc='sudo systemctl'
+alias scl='sudo systemctl list-unit-files --type=service'
+alias scla='sudo systemctl list-units --type=service --state=running'
+alias scs='sudo systemctl status'
+alias scr='sudo systemctl restart'
+alias scsn='sudo systemctl status nginx'
+alias scrn='sudo systemctl restart nginx'
+alias scsm='sudo systemctl status mysql'
+alias scrm='sudo systemctl restart mysql'
+alias scss='sudo systemctl status $APP_SERVICE_NAME'
+alias scrs='sudo systemctl restart $APP_SERVICE_NAME'

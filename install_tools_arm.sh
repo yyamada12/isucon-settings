@@ -31,3 +31,4 @@ rm pt-query-digest
 
 # upload_file_slack.sh
 curl -L https://raw.githubusercontent.com/yyamada12/isucon-settings/master/upload_file_slack.sh -o ~/upload_file_slack.sh
+chmod +x ~/upload_file_slack.sh

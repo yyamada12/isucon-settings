@@ -24,3 +24,8 @@ curl -L https://raw.githubusercontent.com/yyamada12/isucon-settings/master/.vimr
 # deploy script
 curl -L https://raw.githubusercontent.com/yyamada12/isucon-settings/master/deploy.sh -o ~/deploy.sh
 chmod +x ~/deploy.sh
+
+# set_env.sh
+curl -L https://raw.githubusercontent.com/yyamada12/isucon-settings/master/set_env.sh -o ~/set_env.sh
+chmod +x ~/set_env.sh
+~/set_env.sh

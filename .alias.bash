@@ -10,6 +10,7 @@ alias gst='git status'
 alias gco='git checkout'
 alias gf='git fetch'
 alias gci='git commit'
+alias gcia='git commit --amend'
 alias gl='git log'
 alias ggr="git log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 alias gsr='gst && echo && ggr'

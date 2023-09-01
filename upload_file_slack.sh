@@ -8,4 +8,4 @@ channel_name=$2
 token=$SLACK_TOKEN
 
 # curlコマンドを実行
-curl -F file=@"$file_name" -F filename="$file_name" -F channels="$channel_name" -H "Authorization: Bearer $token" https://slack.com/api/files.upload
+curl -F file=@"$file_name" -F filename="$file_name" -F channels="$channel_name" -H "Authorization: Bearer $token" https://slack.com/api/files.upload > /dev/null

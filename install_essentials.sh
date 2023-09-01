@@ -1,6 +1,5 @@
 #!/bin/sh
-
-set -eux
+set -x
 
 # 各種インストール
 sudo apt update -y
@@ -11,6 +10,7 @@ curl -L https://raw.githubusercontent.com/yyamada12/isucon-settings/master/.alia
 echo """
 # alias
 source ~/.alias.bash
+source ~/.bash_profile
 
 # for incremental search with Ctr + S
 stty stop undef
@@ -24,6 +24,10 @@ curl -L https://raw.githubusercontent.com/yyamada12/isucon-settings/master/.vimr
 # deploy script
 curl -L https://raw.githubusercontent.com/yyamada12/isucon-settings/master/deploy.sh -o ~/deploy.sh
 chmod +x ~/deploy.sh
+
+# manage_etc_files.sh
+curl -L https://raw.githubusercontent.com/yyamada12/isucon-settings/master/manage_etc_files.sh -o ~/manage_etc_files.sh
+chmod +x ~/manage_etc_files.sh
 
 # set_env.sh
 curl -L https://raw.githubusercontent.com/yyamada12/isucon-settings/master/set_env.sh -o ~/set_env.sh

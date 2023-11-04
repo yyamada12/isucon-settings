@@ -31,7 +31,7 @@ echo "export APP_SERVICE_NAME=\"$app_service_name\"" >> ~/.bash_profile
 
 # Prompt for SLACK_TOKEN and update .bash_profile
 default_slack_token="enter Slack User OAuth Token"
-slack_token=$(prompt_for_input "Enter the value for SLACK_TOKEN" "$default_slack_token")
+slack_token=$(prompt_for_input "Enter the value for SLACK_TOKEN https://api.slack.com/apps/A05GTSY2MKJ/oauth" "$default_slack_token")
 echo "export SLACK_TOKEN=\"$slack_token\"" >> ~/.bash_profile
 
 echo "Environment variables updated."

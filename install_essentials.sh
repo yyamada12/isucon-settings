@@ -28,8 +28,3 @@ chmod +x ~/deploy.sh
 # manage_etc_files.sh
 curl -L https://raw.githubusercontent.com/yyamada12/isucon-settings/master/manage_etc_files.sh -o ~/manage_etc_files.sh
 chmod +x ~/manage_etc_files.sh
-
-# set_env.sh
-curl -L https://raw.githubusercontent.com/yyamada12/isucon-settings/master/set_env.sh -o ~/set_env.sh
-chmod +x ~/set_env.sh
-~/set_env.sh

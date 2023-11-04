@@ -21,8 +21,8 @@ cd $APP_DIR
 $APP_BUILD_CMD
 
 # update mysqld.cnf
-if [ -e ~/etc/mysqld.cnf ]; then
-  sudo cp ~/etc/mysqld.cnf /etc/mysql/mysql.conf.d/mysqld.cnf
+if [ -e ~/etc/mysql/mysqld.cnf ]; then
+  sudo cp ~/etc/mysql/mysqld.cnf /etc/mysql/mysql.conf.d/mysqld.cnf
 fi
 
 # restart services

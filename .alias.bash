@@ -42,9 +42,9 @@ alias pt='sudo pt-query-digest --limit 10 --report-format profile,query_report /
 alias pts='sudo pt-query-digest --limit 10 --report-format profile,query_report /var/log/mysql/slow.log ~/alp.yml > pt-result.txt && ~/upload_file_slack.sh pt-result.txt isucon && cat pt-result.txt && rm -f pt-result.txt'
 
 # pprof
-alias pp='go tool pprof -png -output ~/pprof/pprof.png http://localhost:6060/debug/pprof/profile'
+alias pp='go tool pprof -http=":1234" ~/pprof/pprof.pb.gz'
 # alias pps='go tool pprof -png -output ~/pprof/pprof.png http://localhost:6060/debug/pprof/profile && slackcat -c cancer_acropolis -n pprof.png ~/pprof/pprof.png'
-alias pps='go tool pprof -png -output pprof.png http://localhost:6060/debug/pprof/profile && ~/upload_file_slack.sh pprof.png isucon && rm -f pprof.png'
+alias pps='go tool pprof -png -output pprof.png ~/pprof/pprof.pb.gz && ~/upload_file_slack.sh pprof.png isucon && rm -f pprof.png'
 alias ppb='go tool pprof -http=":1234" http://localhost:6060/debug/pprof/profile'
 
 # app

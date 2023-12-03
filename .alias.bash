@@ -53,6 +53,9 @@ alias pps='go tool pprof -png -output pprof.png ~/pprof/pprof.pb.gz && ~/upload_
 alias pps_bak='go tool pprof -png -output pprof.png ~/pprof/pprof_bak.pb.gz && ~/upload_file_slack.sh pprof.png isucon && rm -f pprof.png'
 alias ppb='go tool pprof -http=":1234" http://localhost:6060/debug/pprof/profile'
 
+alias fgp='go tool pprof -http=":1235" ~/pprof/fgprof.pb.gz'
+alias fgp_bak='go tool pprof -http=":1235" ~/pprof/fgprof_bak.pb.gz'
+
 # app
 alias deploy='~/deploy.sh'
 alias applog='sudo journalctl -u $APP_SERVICE_NAME'

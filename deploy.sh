@@ -14,15 +14,30 @@ function rotate_log () {
 rotate_log /var/log/nginx/access.log
 rotate_log /var/log/nginx/error.log
 rotate_log /var/log/mysql/slow.log
+rotate_log ~/pprof/pprof.pb.gz
 
 
 # build go app
 cd $APP_DIR
 $APP_BUILD_CMD
 
-# update mysqld.cnf
+# replace mysqld.cnf
 if [ -e ~/etc/mysql/mysqld.cnf ]; then
   sudo cp ~/etc/mysql/mysqld.cnf /etc/mysql/mysql.conf.d/mysqld.cnf
+fi
+
+# replace nginx.conf
+if [ -e ~/etc/nginx/nginx.conf ]; then
+  sudo cp ~/etc/nginx/nginx.conf /etc/nginx/nginx.conf
+fi
+
+if [ -e ~/etc/nginx/sites-enabled ]; then
+  sudo cp ~/etc/nginx/sites-enabled/* /etc/nginx/sites-enabled/
+fi
+
+# replace limits.conf
+if [ -e ~/etc/security/limits.conf ]; then
+  sudo cp ~/etc/security/limits.conf /etc/security/limits.conf
 fi
 
 # restart services

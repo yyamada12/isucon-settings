@@ -33,18 +33,24 @@ alias watch='watch '
 
 # alp
 alias al='sudo alp ltsv -c ~/alp.yml'
+alias al_bak='sudo alp ltsv -c ~/alp.yml --file /var/log/nginx/access_bak.log'
 # alias als='alp ltsv -c ~/alp.yml | slackcat -t -c cancer_acropolis -n alp.txt'
 alias als='sudo alp ltsv -c ~/alp.yml > alp-result.txt && ~/upload_file_slack.sh alp-result.txt isucon && cat alp-result.txt && rm -f alp-result.txt'
+alias als_bak='sudo alp ltsv -c ~/alp.yml --file /var/log/nginx/access_bak.log > alp-result.txt && ~/upload_file_slack.sh alp-result.txt isucon && cat alp-result.txt && rm -f alp-result.txt'
 
 # pt-query-digest
 alias pt='sudo pt-query-digest --limit 10 --report-format profile,query_report /var/log/mysql/slow.log | less'
+alias pt_bak='sudo pt-query-digest --limit 10 --report-format profile,query_report /var/log/mysql/slow_bak.log | less'
 # alias pts='sudo pt-query-digest --limit 10 --report-format profile,query_report /var/log/mysql/slow.log | slackcat -c cancer_acropolis -n slowlog.txt'
 alias pts='sudo pt-query-digest --limit 10 --report-format profile,query_report /var/log/mysql/slow.log ~/alp.yml > pt-result.txt && ~/upload_file_slack.sh pt-result.txt isucon && cat pt-result.txt && rm -f pt-result.txt'
+alias pts_bak='sudo pt-query-digest --limit 10 --report-format profile,query_report /var/log/mysql/slow_bak.log ~/alp.yml > pt-result.txt && ~/upload_file_slack.sh pt-result.txt isucon && cat pt-result.txt && rm -f pt-result.txt'
 
 # pprof
 alias pp='go tool pprof -http=":1234" ~/pprof/pprof.pb.gz'
+alias pp_bak='go tool pprof -http=":1234" ~/pprof/pprof_bak.pb.gz'
 # alias pps='go tool pprof -png -output ~/pprof/pprof.png http://localhost:6060/debug/pprof/profile && slackcat -c cancer_acropolis -n pprof.png ~/pprof/pprof.png'
 alias pps='go tool pprof -png -output pprof.png ~/pprof/pprof.pb.gz && ~/upload_file_slack.sh pprof.png isucon && rm -f pprof.png'
+alias pps_bak='go tool pprof -png -output pprof.png ~/pprof/pprof_bak.pb.gz && ~/upload_file_slack.sh pprof.png isucon && rm -f pprof.png'
 alias ppb='go tool pprof -http=":1234" http://localhost:6060/debug/pprof/profile'
 
 # app

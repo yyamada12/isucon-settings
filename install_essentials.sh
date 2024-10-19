@@ -7,9 +7,11 @@ sudo apt install -y --fix-missing git vim tmux tig
 
 # bashrc
 curl -L https://raw.githubusercontent.com/yyamada12/isucon-settings/master/.alias.bash -o ~/.alias.bash
+touch ~/.bash_profile
 echo """
 # alias
 source ~/.alias.bash
+source ~/.bash_profile
 
 # for incremental search with Ctr + S
 stty stop undef

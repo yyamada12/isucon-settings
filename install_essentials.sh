@@ -10,7 +10,6 @@ curl -L https://raw.githubusercontent.com/yyamada12/isucon-settings/master/.alia
 echo """
 # alias
 source ~/.alias.bash
-source ~/.bash_profile
 
 # for incremental search with Ctr + S
 stty stop undef

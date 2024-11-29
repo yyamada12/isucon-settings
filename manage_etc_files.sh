@@ -13,6 +13,11 @@ sudo cp -r /etc/nginx/sites-enabled /etc/nginx/sites-enabled.org
 sudo cp -r /etc/nginx/sites-enabled/* ~/etc/nginx/sites-enabled/
 sudo chmod a+w ~/etc/nginx/sites-enabled/*
 
+mkdir -p ~/etc/nginx/sites-available
+sudo cp -r /etc/nginx/sites-available /etc/nginx/sites-available.org
+sudo cp -r /etc/nginx/sites-available/* ~/etc/nginx/sites-available/
+sudo chmod a+w ~/etc/nginx/sites-available/*
+
 
 # mysql
 mkdir -p ~/etc/mysql

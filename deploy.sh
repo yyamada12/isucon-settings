@@ -33,7 +33,11 @@ if [ -e ~/etc/nginx/nginx.conf ]; then
 fi
 
 if [ -e ~/etc/nginx/sites-enabled ]; then
-  sudo cp ~/etc/nginx/sites-enabled/* /etc/nginx/sites-enabled/
+  sudo cp ~/etc/nginx/sites-enabled/* /etc/nginx/sites-enabled/ || true
+fi
+
+if [ -e ~/etc/nginx/sites-available ]; then
+  sudo cp ~/etc/nginx/sites-available/* /etc/nginx/sites-available/
 fi
 
 # replace limits.conf

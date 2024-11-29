@@ -45,6 +45,10 @@ if [ -e ~/etc/security/limits.conf ]; then
   sudo cp ~/etc/security/limits.conf /etc/security/limits.conf
 fi
 
+# delete old logs
+sudo journalctl --rotate
+sudo journalctl --vacuum-time=1s
+
 # restart services
 sudo systemctl restart mysql
 sudo systemctl restart $APP_SERVICE_NAME
